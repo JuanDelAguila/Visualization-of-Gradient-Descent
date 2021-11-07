@@ -6,3 +6,9 @@ This is a personal investigation into the efficiency and accuracy of different g
  
 ## Results
 ![](results/minimize_f_steepest_descent_stepsize_0.4.png)
+![](results/minimize_f_steepest_descent_stepsize_0.8.png)
+![](results/minimize_f_newton.png)
+![](results/minimize_f_momentum.png)
+![](results/minimize_g_steepest_descent.png)
+![](results/minimize_g_newton.png)
+![](results/minimize_g_momentum.png)
