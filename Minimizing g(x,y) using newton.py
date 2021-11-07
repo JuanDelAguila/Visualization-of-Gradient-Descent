@@ -45,7 +45,7 @@ def newton (start_x, start_y):
     previous_guess_x = start_x
     previous_guess_y = start_y
     historic_steps = np.array([start_x,start_y])
-    step_size = 1
+    step_size = 0.1
     i = 1
     while i <= number_steps:
         grad = np.array([dfdx(previous_guess_x,previous_guess_y),dfdy(previous_guess_x,previous_guess_y)])
@@ -62,8 +62,8 @@ def newton (start_x, start_y):
 contour_plot = plt.figure(2)
 
 # Plotting minimization for different starting points
-starting_points = [[-2,2], [0,0], [0.1,0.1], [0, 1.2]]
-colors = ["magenta", "orange", "black", "red"]
+starting_points = [[2,1], [0.3,0.5], [0.5,0.5], [-0.1, -0.3], [0.4,1.8]]
+colors = ["magenta", "orange", "black", "red", "cyan"]
 for (start_x, start_y), color in zip(starting_points, colors):
     historic_steps = newton (start_x, start_y)
     plt.plot(historic_steps[:,0], historic_steps[:,1], color = color, label = f"Starting Point: [{start_x},{start_y}]")
@@ -75,12 +75,12 @@ plt.colorbar()
 plt.xlabel('x')
 plt.ylabel('y')
 g = r"$g(x,y) = -(x^2+y^2)e^{-x^2-y^2}-(x^5+y^5)e^{-x^2-y^2}$"
-plt.title(r"Minimizing "+ g + "\n using Newton's method with 100 steps and step-size 0.2", size = 10, pad = 10)
+plt.title(r"Minimizing "+ g + "\n using Newton's method with 100 steps and step-size 0.1", size = 10, pad = 10)
 
 plt.xlim(x_min,x_max)
 plt.ylim(y_min,y_max)
 
-plt.legend()
+plt.legend(loc = "lower right")
 
 plt.savefig(f"results/minimize g with newton.png", dpi = 300)
 

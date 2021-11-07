@@ -47,7 +47,7 @@ def steepest_descent(start_x, start_y):
     return historic_steps
 
 # Plotting minimization for different starting points
-starting_points = [[-2,2], [0,0], [0.1,0.1], [-0.1, -0.1]]
+starting_points = [[2,1], [0.3,0.5], [0.5,0.5], [-0.1, -0.3]]
 colors = ["magenta", "orange", "red", "black"]
 for (start_x, start_y), color in zip(starting_points, colors):
     historic_steps = steepest_descent(start_x, start_y)
@@ -65,7 +65,7 @@ plt.title(r"Minimizing "+ g + "\n using Steepest Descent with 100 steps and step
 plt.xlim(x_min,x_max)
 plt.ylim(y_min,y_max)
 
-plt.legend()
+plt.legend(loc = "lower right")
 
 plt.savefig(f"results/minimize g with steepest descent.png", dpi = 300)
 
