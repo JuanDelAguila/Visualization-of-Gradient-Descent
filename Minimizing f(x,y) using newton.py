@@ -32,12 +32,6 @@ def df2dy2(x,y):
 def df2dyx(x,y):
     return 0*x+0*y
 
-#Generating 1000 evenly spaced x,y intervals to evaluate the function
-x=np.linspace(-200,200,1000)
-y=np.linspace(-200,200,1000)
-#####################
-
-
 # Generating 1000 evenly spaced x,y intervals to evaluate the function
 x=np.linspace(x_min,x_max,1000)
 y=np.linspace(y_min,y_max,1000)
@@ -70,8 +64,6 @@ while i <= number_steps:
     historic_steps = np.vstack((historic_steps,np.array([previous_guess_x, previous_guess_y])))
     i+=1
 
-contour_plot = plt.figure(2)
-
 # Track the gradient descent
 plt.plot(historic_steps[:,0], historic_steps[:,1], color = 'orange', label = "Minimization Steps")
 
@@ -82,13 +74,13 @@ plt.contourf(X,Y,Z, 500,cmap = 'viridis')
 plt.colorbar()
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title(r"Minimizing $f(x,y) = \left(\frac{x}{5}\right)^2+y^2$ using Gauss Newton" + "\nwith 1 step and " + f"step-size {step_size}", size = 10, pad = 10)
+plt.title(r"Minimizing $f(x,y) = \left(\frac{x}{5}\right)^2+y^2$ using Newton's Method" + "\nwith 1 step and " + f"step-size {step_size}", size = 10, pad = 10)
 
 plt.xlim(x_min,x_max)
 plt.ylim(y_min,y_max)
 
 plt.legend()
 
-plt.savefig(f"results/minimize f with gauss newton.png", dpi = 300)
+plt.savefig(f"results/minimize f with newton.png", dpi = 300)
 
 

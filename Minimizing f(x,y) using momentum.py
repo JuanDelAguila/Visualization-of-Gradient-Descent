@@ -53,7 +53,6 @@ while i <= number_steps:
     previous_guess_y = new_guess_y
     historic_steps = np.vstack((historic_steps,np.array([previous_guess_x, previous_guess_y])))
     i+=1
-print (historic_steps.shape)
 
 # Track the gradient descent
 plt.plot(historic_steps[:,0], historic_steps[:,1], color = 'orange', label = "Minimization Steps")
