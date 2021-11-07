@@ -82,5 +82,5 @@ plt.ylim(y_min,y_max)
 
 plt.legend(loc = "lower right")
 
-plt.savefig(f"results/minimize g with newton.png", dpi = 300)
+plt.savefig(f"results/minimize_g_newton.png", dpi = 300)
 

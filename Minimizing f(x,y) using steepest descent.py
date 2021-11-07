@@ -66,5 +66,5 @@ plt.ylim(y_min,y_max)
 
 plt.legend()
 
-plt.savefig(f"results/minimize f with steepest descent and step size {step_size}.png", dpi = 300)
+plt.savefig(f"results/minimize_f_steepest_descent_stepsize_{step_size}.png", dpi = 300)
 

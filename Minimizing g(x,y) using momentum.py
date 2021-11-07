@@ -73,5 +73,5 @@ plt.ylim(y_min,y_max)
 plt.legend(loc = "lower right")
 plt.margins(x=50)
 
-plt.savefig(f"results/minimize g with momentum.png", dpi = 300)
+plt.savefig(f"results/minimize_g_momentum.png", dpi = 300)
 

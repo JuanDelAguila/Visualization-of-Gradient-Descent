@@ -67,5 +67,5 @@ plt.ylim(y_min,y_max)
 
 plt.legend(loc = "lower right")
 
-plt.savefig(f"results/minimize g with steepest descent.png", dpi = 300)
+plt.savefig(f"results/minimize_g_steepest_descent.png", dpi = 300)
 

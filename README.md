@@ -5,4 +5,4 @@ This is a personal investigation into the efficiency and accuracy of different g
 - g(x,y) = (-x^2-y^2)*e^(-x^2-y^2) + (-x^5-y^5)*e^(-x^2-y^2) 
  
 ## Results
-![plot](results/minimize f with steepest descent and step size 0.4)
+![](results/"minimize f with steepest descent and step size 0.4)
